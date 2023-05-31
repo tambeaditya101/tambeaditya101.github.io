@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.29b9943d.css",
-    "main.js": "/static/js/main.3a611969.js",
+    "main.js": "/static/js/main.7c499c62.js",
     "static/js/787.d9dba5bb.chunk.js": "/static/js/787.d9dba5bb.chunk.js",
     "static/media/tripAdpic.png": "/static/media/tripAdpic.1d6aa462b4ae055e63bc.png",
     "static/media/brookSpic.png": "/static/media/brookSpic.51006bb2b1f84ce39597.png",
     "static/media/internTheorypic.png": "/static/media/internTheorypic.7247bbe5d58fb5c5a8e3.png",
+    "static/media/caret.png": "/static/media/caret.aae150f67c78c7104ede.png",
     "static/media/health-care.png": "/static/media/health-care.3c91c47246fbb03a9277.png",
     "static/media/me.png.jpeg": "/static/media/me.png.932ad657f3ebeebc1f67.jpeg",
     "static/media/pixel-city-art.gif": "/static/media/pixel-city-art.92421429b819ace34627.gif",
     "static/media/Aditya-Tambe-Resume.pdf": "/static/media/Aditya-Tambe-Resume.26d196d1998ac0f677c3.pdf",
     "index.html": "/index.html",
     "main.29b9943d.css.map": "/static/css/main.29b9943d.css.map",
-    "main.3a611969.js.map": "/static/js/main.3a611969.js.map",
+    "main.7c499c62.js.map": "/static/js/main.7c499c62.js.map",
     "787.d9dba5bb.chunk.js.map": "/static/js/787.d9dba5bb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.29b9943d.css",
-    "static/js/main.3a611969.js"
+    "static/js/main.7c499c62.js"
   ]
 }
