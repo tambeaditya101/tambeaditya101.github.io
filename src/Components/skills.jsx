@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaReact } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -7,8 +7,12 @@ import { SiRedux } from "react-icons/si";
 import { DiNodejs } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 import { TfiWrite } from "react-icons/tfi";
-
+import "aos/dist/aos.css";
+import Aos from "aos";
 const Skills = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2500, disable: "mobile" });
+  }, []);
   return (
     <>
       <section id="skills">
@@ -20,7 +24,7 @@ const Skills = () => {
         </div>
 
         <div className="nav-link skills" id="skills-part">
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img">
               <FaReact
                 style={{ height: "50px", width: "50px", margin: "auto" }}
@@ -30,7 +34,7 @@ const Skills = () => {
               React
             </h3>
           </div>
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img">
               <TbBrandJavascript
                 style={{ height: "50px", width: "50px", margin: "auto" }}
@@ -40,7 +44,7 @@ const Skills = () => {
               JavaScript
             </h3>
           </div>
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img">
               <AiOutlineHtml5
                 style={{ height: "50px", width: "50px", margin: "auto" }}
@@ -50,7 +54,7 @@ const Skills = () => {
               HTML
             </h3>
           </div>
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img">
               <TbBrandCss3
                 style={{ height: "50px", width: "50px", margin: "auto" }}
@@ -60,7 +64,7 @@ const Skills = () => {
               CSS
             </h3>
           </div>
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img" style={{ textAlign: "center" }}>
               <SiRedux
                 style={{ height: "50px", width: "50px", margin: "auto" }}
@@ -70,7 +74,7 @@ const Skills = () => {
               Redux
             </h3>
           </div>
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img">
               <DiNodejs
                 style={{ height: "50px", width: "50px", margin: "auto" }}
@@ -80,7 +84,7 @@ const Skills = () => {
               Node JS
             </h3>
           </div>
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img">
               <SiTypescript
                 style={{ height: "50px", width: "50px", margin: "auto" }}
@@ -91,7 +95,7 @@ const Skills = () => {
             </h3>
           </div>
 
-          <div className="skills-card">
+          <div className="skills-card" data-aos="flip-right">
             <div className="skills-card-img">
               <TfiWrite
                 style={{ height: "50px", width: "50px", margin: "auto" }}

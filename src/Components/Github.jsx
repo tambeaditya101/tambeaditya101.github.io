@@ -1,9 +1,9 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 
-const Githubs = () => {
+const Github = () => {
   return (
-    <div id="githubs" className="max-width">
+    <div id="github" className="max-width">
       <div className="main-text">
         <h2>
           <span>GitHub </span>Statistics
@@ -65,4 +65,4 @@ const Githubs = () => {
   );
 };
 
-export default Githubs;
+export default Github;

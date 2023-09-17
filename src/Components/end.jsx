@@ -7,7 +7,7 @@ const End = () => {
       <section className="end">
         <div className="last" style={{ display: "flex" }}>
           <AiOutlineCopyrightCircle color=" #42b2e6" />
-          <p>Created by Aditya Tambe 2023 All Rights Reserved.</p>
+          <p>Aditya Tambe, 2023. All Rights Reserved.</p>
         </div>
         <div className="top">
           <a href="#home">

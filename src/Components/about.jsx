@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import CV from "../assests/cv.pdf";
 import ME from "../assests/me.png.jpeg";
-
+import "aos/dist/aos.css";
+import Aos from "aos";
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2500 });
+  }, []);
   return (
     <>
       <section className="about section" id="about">
-        <div className="about-img">
+        <div className="about-img" data-aos="zoom-out">
           <img className="home-img" src={ME} alt="profilePic" />
         </div>
         <div className="nav-link about">
@@ -17,37 +21,16 @@ const About = () => {
             I'm <span>Aditya Tambe</span> from Mumbai, Maharashtra
           </h2>
           {/* <h4>Mern Developer</h4> */}
-          <p
-            id="user-detail-intro"
-            style={{ letterSpacing: "2px", color: "white", paddingTop: "10px" }}
-          >
+          <p id="user-detail-intro" data-aos="fade-left">
             A Frontend Web developer with good technical skills in Masai School
             who possess self-discipline and the ability to work under minimum
             supervision. Forward to join a progressive organization with
             opportunities to work on significant projects. Developing scalable
             websites and application using a wide range of front-end and
-            back-end skills like HTML, CSS, JavaScript, React, Redux, TypeScript
-            and Node Js.
-            {/* About Me
-            An enthusiastic Mern Developer with excellent hands-on experience in developing scalable websites and application using a wide range of front-end and back-end skills like HTML, CSS, JavaScript, React, Redux and Node Js. Highly skilled in design, development and implementation of functional specifications, Ready for taking challenging roles.. */}
+            back-end skills like HTML, CSS, JavaScript, React, Redux,
+            TypeScript,Node Js, Express, MongodB and Prompt
+            Engineering(Generative Ai).
           </p>
-          {/* <button id="resume-button-2" style={{ marginTop: "5px" }}>
-            <a
-              href={CV}
-              download="pdf"
-              id="resume-link-2"
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1xToIqX_OF_AIg_c4FZYW943_D9NaLcpI/view?usp=sharing"
-                )
-              }
-            >
-              <span>
-                <i className="bx bx-download"></i>
-              </span>
-              Resume
-            </a>
-          </button> */}
         </div>
       </section>
     </>

@@ -80,12 +80,18 @@ const Header = () => {
         <div id="menu-icon">
           <DropDown
             options={[
-              <a href="#home">Home</a>,
-              <a href="#about">About</a>,
-              <a href="#skills">Skills</a>,
-              <a href="#projects">Projects</a>,
-              <a href="#githubs">GitHub</a>,
-              <a href="#contact">Contact</a>,
+              // <a href="#home">Home</a>,
+              // <a href="#about">About</a>,
+              // <a href="#skills">Skills</a>,
+              // <a href="#projects">Projects</a>,
+              // <a href="#githubs">GitHub</a>,
+              // <a href="#contact">Contact</a>,
+              "#home",
+              "#about",
+              "#skills",
+              "#projects",
+              "#github",
+              "#contact",
             ]}
             onSelect={handleOptionSelect}
           />
