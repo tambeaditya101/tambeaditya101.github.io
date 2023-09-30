@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.ce891d75.css",
+    "main.css": "/static/css/main.f77464b0.css",
     "main.js": "/static/js/main.5abf5bad.js",
     "static/js/787.d9dba5bb.chunk.js": "/static/js/787.d9dba5bb.chunk.js",
     "static/media/tripAdpic.png": "/static/media/tripAdpic.1d6aa462b4ae055e63bc.png",
@@ -12,12 +12,12 @@
     "static/media/pixel-city-art.gif": "/static/media/pixel-city-art.92421429b819ace34627.gif",
     "static/media/Aditya-Tambe-Resume.pdf": "/static/media/Aditya-Tambe-Resume.26d196d1998ac0f677c3.pdf",
     "index.html": "/index.html",
-    "main.ce891d75.css.map": "/static/css/main.ce891d75.css.map",
+    "main.f77464b0.css.map": "/static/css/main.f77464b0.css.map",
     "main.5abf5bad.js.map": "/static/js/main.5abf5bad.js.map",
     "787.d9dba5bb.chunk.js.map": "/static/js/787.d9dba5bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce891d75.css",
+    "static/css/main.f77464b0.css",
     "static/js/main.5abf5bad.js"
   ]
 }
