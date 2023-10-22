@@ -4,13 +4,13 @@ import ME from "../assests/me.png.jpeg";
 import "aos/dist/aos.css";
 import Aos from "aos";
 const About = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2500 });
-  }, []);
+  // useEffect(() => {
+  //   Aos.init({ duration: 2500 });
+  // }, []);
   return (
     <>
       <section className="about section" id="about">
-        <div className="about-img" data-aos="zoom-out">
+        <div className="about-img">
           <img className="home-img" src={ME} alt="profilePic" />
         </div>
         <div className="nav-link about">
@@ -21,7 +21,7 @@ const About = () => {
             I'm <span>Aditya Tambe</span> from Mumbai, Maharashtra
           </h2>
           {/* <h4>Mern Developer</h4> */}
-          <p id="user-detail-intro" data-aos="fade-left">
+          <p id="user-detail-intro">
             A Frontend Web developer with good technical skills in Masai School
             who possess self-discipline and the ability to work under minimum
             supervision. Forward to join a progressive organization with

@@ -34,7 +34,7 @@ const Home = () => {
           <button id="resume-button-2" style={{ marginTop: "5px" }}>
             <a
               href={CV}
-              download="pdf"
+              download="Aditya-Tambe-Resume"
               id="resume-link-2"
               target="_blank"
               onClick={() =>

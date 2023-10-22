@@ -7,6 +7,7 @@ import Projects from "./Components/Projects";
 import Github from "./Components/Github";
 import Contact from "./Components/contact";
 import End from "./Components/end";
+import Tools from "./Components/Tools";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <About />
       <Skills />
+      <Tools />
       <Projects />
       <Github />
       <Contact />

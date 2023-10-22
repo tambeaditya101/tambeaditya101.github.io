@@ -1,20 +1,19 @@
 import React from "react";
-import { FaReact, FaRobot } from "react-icons/fa";
-import { TbBrandJavascript } from "react-icons/tb";
-import { AiOutlineHtml5 } from "react-icons/ai";
-import { TbBrandCss3 } from "react-icons/tb";
-import { SiChakraui, SiMongodb, SiRedux } from "react-icons/si";
-import { DiNodejs } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
-import { TfiWrite } from "react-icons/tfi";
+import { SiCanva, SiPostman } from "react-icons/si";
+import { TbBrandVscode } from "react-icons/tb";
+import { SiNetlify } from "react-icons/si";
+import { RxVercelLogo } from "react-icons/rx";
+import { FiFigma } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
+import { BsGit } from "react-icons/bs";
 
-const Skills = () => {
+const Tools = () => {
   return (
     <>
-      <section id="skills">
+      <section style={{ paddingTop: "0px" }} id="skills">
         <div className="main-text">
           <h2>
-            <span>My </span>Skills
+            <span>My </span>Tools
           </h2>
           <p style={{ marginTop: "10px" }}>What I am Expert In ?</p>
         </div>
@@ -22,113 +21,83 @@ const Skills = () => {
         <div className="nav-link skills" id="skills-part">
           <div className="skills-card">
             <div className="skills-card-img">
-              <FaReact
+              <TbBrandVscode
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              React
+              VS Code
             </h3>
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              <TbBrandJavascript
+              <SiPostman
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              JavaScript
+              Postman
             </h3>
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              <AiOutlineHtml5
+              <SiCanva
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              HTML
+              Canva
             </h3>
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              <TbBrandCss3
+              <SiNetlify
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              CSS
+              Netlify
             </h3>
           </div>
           <div className="skills-card">
             <div className="skills-card-img" style={{ textAlign: "center" }}>
-              <SiRedux
+              <RxVercelLogo
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              Redux
+              Vercel
             </h3>
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              <DiNodejs
+              <BsGit
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              Node JS
+              Git
             </h3>
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              <SiTypescript
+              <AiFillGithub
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              TypeScript
+              Github
             </h3>
           </div>
 
           <div className="skills-card">
             <div className="skills-card-img">
-              <TfiWrite
+              <FiFigma
                 style={{ height: "50px", width: "50px", margin: "auto" }}
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              DSA
-            </h3>
-          </div>
-          <div className="skills-card">
-            <div className="skills-card-img">
-              <SiMongodb
-                style={{ height: "50px", width: "50px", margin: "auto" }}
-              />
-            </div>
-            <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              MongoDB
-            </h3>
-          </div>
-          <div className="skills-card">
-            <div className="skills-card-img">
-              <SiChakraui
-                style={{ height: "50px", width: "50px", margin: "auto" }}
-              />
-            </div>
-            <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              Chakra UI
-            </h3>
-          </div>
-          <div className="skills-card">
-            <div className="skills-card-img">
-              <FaRobot
-                style={{ height: "50px", width: "50px", margin: "auto" }}
-              />
-            </div>
-            <h3 className="skills-card-name" style={{ color: "#42b2e6" }}>
-              Gen AI
+              Figma
             </h3>
           </div>
         </div>
@@ -137,4 +106,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Tools;

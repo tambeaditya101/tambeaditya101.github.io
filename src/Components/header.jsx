@@ -49,7 +49,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#githubs" onClick={() => setActiveNav("#githubs")}>
+            <a href="#github" onClick={() => setActiveNav("#github")}>
               {" "}
               GitHub
             </a>
@@ -64,7 +64,7 @@ const Header = () => {
             <a
               href={CV}
               target="_blank"
-              download="pdf"
+              download="Aditya-Tambe-Resume"
               id="resume-link-1"
               className="nav-link resume"
               onClick={() =>

@@ -614,6 +614,7 @@ form textarea {
     display: block;
     font-size: 20px;
   }
+
   .navlist {
     position: absolute;
     top: -1000px;
@@ -699,6 +700,7 @@ form textarea {
   #about {
     grid-template-columns: 1fr;
   }
+
   .about-img {
     margin: auto;
     order: 2;
@@ -763,6 +765,10 @@ form textarea {
   #menu-icon {
     display: block;
     font-size: 20px;
+  }
+  #nav-menu {
+    gap: 6;
+    /* border: 1px solid blue; */
   }
   .home-img {
     margin-top: 2rem;
@@ -867,12 +873,13 @@ form textarea {
   border: 1px solid #ccc;
   max-height: 500px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .dropdown-item {
   cursor: pointer;
   padding: 10px 15px;
-  color: green;
+  color: #42b2e6;
   width: 100%;
   border-bottom: 1px solid #42b2e6;
 }

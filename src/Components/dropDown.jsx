@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CV from "../assests/Aditya-Tambe-Resume.pdf";
 
 function DropDown({ options, onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,21 @@ function DropDown({ options, onSelect }) {
                   </div>
                 </a>
               </li>
-            ))}
+            ))}{" "}
+            <a
+              href={CV}
+              target="_blank"
+              download="Aditya-Tambe-Resume"
+              // id="resume-link-1"
+              // className="nav-link resume"
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1FjXJuFMy2nU-P03Wx8Ck25Ct9t4l7c3q/view?usp=share_link"
+                )
+              }
+            >
+              <li className="dropdown-item">RESUME</li>
+            </a>
           </ul>
         </div>
       )}
