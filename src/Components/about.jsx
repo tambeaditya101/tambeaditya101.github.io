@@ -66,10 +66,10 @@ const About = () => {
           ></motion.div>
         </motion.div>
 
-        <div className='grid lg:grid-cols-2 gap-12 items-center'>
+        <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-12 items-center'>
           {/* Image Section */}
           <motion.div
-            className='flex justify-center lg:justify-start'
+            className='flex justify-center lg:justify-center'
             variants={imageVariants}
             initial='hidden'
             whileInView='visible'
@@ -78,7 +78,7 @@ const About = () => {
             <div className='relative'>
               <div className='absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur-lg opacity-50'></div>
               <img
-                className='relative w-80 h-80 object-cover rounded-2xl shadow-2xl border-4 border-white/20'
+                className='relative w-60 h-80 object-cover rounded-xl shadow-2xl border-4 border-white/20'
                 src={ME}
                 alt='Aditya Tambe Profile'
               />
