@@ -137,7 +137,7 @@ const Header = () => {
       }}
     >
       <div className='container mx-auto px-6 py-4 h-20 flex items-center'>
-        <div className='flex items-center justify-between w-full'>
+        <div className='flex items-center justify-between md:space-x-10 w-full'>
           {/* Logo */}
           <motion.a
             href='#home'
@@ -150,7 +150,7 @@ const Header = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <nav className='hidden md:flex items-center space-x-8'>
+          <nav className='hidden md:flex items-center space-x-8 md:space-x-1'>
             {navItems.map((item, index) => (
               <motion.a
                 key={item.href}
