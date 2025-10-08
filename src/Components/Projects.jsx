@@ -9,6 +9,8 @@ import tripAdpic from "../assests/tripAdpic.png";
 import urlShortner from "../assests/url-shortner.png";
 import nextLearnEcom from "../assests/nextLearn-ecom.png";
 import { useTheme } from "../contexts/ThemeContext";
+import TruncatedText from "./TruncatedText";
+import TruncatedTechStack from "./TruncatedTechStack";
 
 const Projects = () => {
   const { isDarkMode, colors } = useTheme();
@@ -29,9 +31,7 @@ const Projects = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-      },
+      transition: { duration: 0.6 },
     },
   };
 
@@ -56,10 +56,10 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 1,
+      id: 2,
       title: "NextLearn Store – Full-Stack E-Commerce Web App ",
       description:
-        "A modern, full-stack e-commerce application built with Next.js and PostgreSQL,featuring secure JWT authentication, dynamic product management, and a responsive, elegant UI powered by Tailwind CSS and Context API.",
+        "A modern, full-stack e-commerce application built with Next.js and PostgreSQL, featuring secure JWT authentication, dynamic product management, and a responsive, elegant UI powered by Tailwind CSS and Context API.",
       techStack: [
         "React.js",
         "Next.js",
@@ -76,10 +76,10 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 2,
+      id: 3,
       title: "Tata 1mg Clone",
       description:
-        "E-commerce website for medicines with complete functionalities including login/signup, sort-filter-pagination, CRUD operations for Admin panel, with full responsiveness.",
+        "E-commerce website for medicines with functionalities including login/signup, sort-filter-pagination, and CRUD operations for Admin panel.",
       techStack: ["React", "Redux", "Chakra UI", "Firebase", "JavaScript"],
       image: hc,
       liveLink: "https://health-care-tau.vercel.app/",
@@ -88,10 +88,10 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 3,
+      id: 4,
       title: "CaratLane Clone",
       description:
-        "A comprehensive jewelry e-commerce platform featuring gold, silver, platinum, and diamond jewelry with modern shopping experience.",
+        "A comprehensive jewelry e-commerce platform featuring gold, silver, and diamond jewelry with modern shopping experience.",
       techStack: [
         "React",
         "Redux",
@@ -107,10 +107,10 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 4,
+      id: 5,
       title: "Brookstone Clone",
       description:
-        "E-Commerce retail platform with advanced features like search functionality, cart management, product filtering, and admin panel.",
+        "E-Commerce retail platform with features like search functionality, cart management, product filtering, and admin panel.",
       techStack: ["React", "JavaScript", "HTML", "CSS", "Chakra UI"],
       image: brookSpic,
       liveLink: "https://brookstoneclone-tambeaditya101.vercel.app/",
@@ -118,10 +118,10 @@ const Projects = () => {
       featured: false,
     },
     {
-      id: 5,
+      id: 6,
       title: "Let's Trip",
       description:
-        "A beautiful travel destination website that helps users discover and choose perfect vacation spots with stunning visuals.",
+        "A beautiful travel destination website that helps users discover and choose vacation spots with stunning visuals.",
       techStack: ["HTML", "CSS", "JavaScript"],
       image: tripAdpic,
       liveLink: "https://frabjous-khapse-789208.netlify.app/index.html",
@@ -129,7 +129,7 @@ const Projects = () => {
       featured: false,
     },
     {
-      id: 6,
+      id: 7,
       title: "Intern Theory Clone",
       description:
         "A platform designed to help students find appropriate internships quickly and become job-ready with comprehensive resources.",
@@ -191,79 +191,68 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.05 }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
-              className={`card group cursor-pointer overflow-hidden ${
-                project.featured ? "md:col-span-2 lg:col-span-1" : ""
-              }`}
+              className={`card group flex flex-col justify-between rounded-lg shadow-lg p-6  `}
+              style={{ minHeight: "470px" }} // ensures equal height
               variants={itemVariants}
-              whileHover={{ y: -10, scale: 1.02 }}
+              whileHover={{ y: -8, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden rounded-lg mb-6">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  loading="lazy"
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
+              {/* Top Content */}
+              <div>
+                <div className="relative overflow-hidden rounded-lg mb-5">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
 
-              {/* Project Info */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">
                   {project.title}
                 </h3>
 
                 <p
-                  className={`text-sm leading-relaxed ${
+                  className={`text-sm mb-3 ${
                     isDarkMode
                       ? colors.dark.textSecondary
                       : colors.light.textSecondary
                   }`}
                 >
-                  {project.description}
+                  <TruncatedText text={project.description} maxLength={130} />
                 </p>
 
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
-                  {project.techStack.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className={`px-3 py-1 text-xs rounded-full border  ${
-                        isDarkMode
-                          ? colors.dark.textSecondary
-                          : colors.light.textSecondary
-                      }`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <TruncatedTechStack
+                  stack={project.techStack}
+                  maxVisible={6}
+                  isDarkMode={isDarkMode}
+                  colors={colors}
+                />
+              </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-3 pt-4">
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 btn-primary text-sm py-2 px-4 text-center"
-                  >
-                    <FiExternalLink className="inline mr-2" size={16} />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 btn-secondary text-sm py-2 px-4 text-center"
-                  >
-                    <AiFillGithub className="inline mr-2" size={16} />
-                    Code
-                  </a>
-                </div>
+              {/* Bottom Buttons */}
+              <div className="mt-6 flex gap-3">
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 btn-primary text-sm py-2 px-4 text-center"
+                >
+                  <FiExternalLink className="inline mr-2" size={16} />
+                  Live Demo
+                </a>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 btn-secondary text-sm py-2 px-4 text-center"
+                >
+                  <AiFillGithub className="inline mr-2" size={16} />
+                  Code
+                </a>
               </div>
             </motion.div>
           ))}
