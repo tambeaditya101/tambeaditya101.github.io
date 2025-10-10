@@ -128,17 +128,17 @@ const Projects = () => {
       githubLink: "https://github.com/tambeaditya101/thundering-self-8895",
       featured: false,
     },
-    {
-      id: 7,
-      title: "Intern Theory Clone",
-      description:
-        "A platform designed to help students find appropriate internships quickly and become job-ready with comprehensive resources.",
-      techStack: ["HTML", "CSS", "JavaScript"],
-      image: internTheorypic,
-      liveLink: "https://illustrious-gelato-7e4fe9.netlify.app/index.html",
-      githubLink: "https://github.com/Sagarbisht07/nosy-coach-5858",
-      featured: false,
-    },
+    // {
+    //   id: 7,
+    //   title: "Intern Theory Clone",
+    //   description:
+    //     "A platform designed to help students find appropriate internships quickly and become job-ready with comprehensive resources.",
+    //   techStack: ["HTML", "CSS", "JavaScript"],
+    //   image: internTheorypic,
+    //   liveLink: "https://illustrious-gelato-7e4fe9.netlify.app/index.html",
+    //   githubLink: "https://github.com/Sagarbisht07/nosy-coach-5858",
+    //   featured: false,
+    // },
   ];
 
   return (
