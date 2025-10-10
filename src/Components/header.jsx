@@ -198,7 +198,7 @@ const Header = () => {
                 className="flex items-center gap-2"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1tcwo9PNd_T_8rZb-xflcmSSVGDvSANhR/view?usp=sharing"
+                    "https://drive.google.com/file/d/1p9hDNZF1Fa_I9Ng4HFWyjs6dUjxTucd7/view?usp=drive_link"
                   )
                 }
               >
@@ -322,7 +322,7 @@ const Header = () => {
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   window.open(
-                    "https://drive.google.com/file/d/1tcwo9PNd_T_8rZb-xflcmSSVGDvSANhR/view?usp=sharing"
+                    "https://drive.google.com/file/d/1p9hDNZF1Fa_I9Ng4HFWyjs6dUjxTucd7/view?usp=drive_link"
                   );
                 }}
               >
