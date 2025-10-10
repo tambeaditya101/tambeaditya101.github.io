@@ -136,7 +136,7 @@ const Skills = () => {
                   {/* Progress Bar */}
                   <div className="w-full bg-white/20 rounded-full h-2 mb-2">
                     <motion.div
-                      className="h-2 rounded-full bg-gradient-to-r from-blue-400 via-teal-400 to-pink-500 border border-white/20"
+                      className="h-2 rounded-full bg-gradient-to-r from-yellow-100 via-orange-200 to-red-500 border border-white/20"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 1, delay: index * 0.1 }}
