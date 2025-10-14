@@ -150,7 +150,7 @@ const Header = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 md:space-x-1">
+          <nav className="hidden md:flex items-center space-x-8 md:space-x-0.5">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.href}

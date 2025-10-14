@@ -134,14 +134,14 @@ const Skills = () => {
                   </h3>
 
                   {/* Progress Bar */}
-                  <div className="w-full bg-white/20 rounded-full h-2 mb-2">
+                  <div className="w-full rounded-full h-2 mb-2 border border-white-400  bg-transparent overflow-hidden">
                     <motion.div
-                      className="h-2 rounded-full bg-gradient-to-r from-yellow-100 via-orange-200 to-red-500 border border-white/20"
+                      className="h-full bg-gradient-to-r from-yellow-200 via-green-300 to-blue-400"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 1, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                    ></motion.div>
+                    />
                   </div>
 
                   {/* Percentage */}

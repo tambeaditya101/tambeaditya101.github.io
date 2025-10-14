@@ -83,8 +83,7 @@ const Projects = () => {
       techStack: ["React", "Redux", "Chakra UI", "Firebase", "JavaScript"],
       image: hc,
       liveLink: "https://health-care-tau.vercel.app/",
-      githubLink:
-        "https://github.com/RutuvikP/chemical-rake-3857/tree/main/health-care",
+      githubLink: "https://github.com/RutuvikP/HealthCare-Tata1mg-Clone",
       featured: true,
     },
     {
