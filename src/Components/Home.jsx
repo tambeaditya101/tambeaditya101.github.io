@@ -80,7 +80,7 @@ const Home = () => {
                   : "from-gray-900 via-blue-900 to-purple-900"
               }`}
             >
-              Aditya
+              Aditya Tambe
             </span>
           </motion.h1>
 
@@ -98,9 +98,9 @@ const Home = () => {
                 options={{
                   strings: [
                     "A Full Stack Web Developer",
-                    "A Bodybuilding Enthusiast",
+                    // "A Bodybuilding Enthusiast",
                     "A Reader",
-                    "An Occasional Artist",
+                    // "An Occasional Artist",
                   ],
                   autoStart: true,
                   loop: true,

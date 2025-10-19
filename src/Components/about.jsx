@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import ME from '../assests/me.png.jpeg';
-import { useTheme } from '../contexts/ThemeContext';
+import { motion } from "framer-motion";
+import ME from "../assests/me.png.jpeg";
+import { useTheme } from "../contexts/ThemeContext";
 
 const About = () => {
   const { isDarkMode, colors } = useTheme();
@@ -33,78 +33,78 @@ const About = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
 
   return (
-    <section className='min-h-screen py-20 relative overflow-hidden' id='about'>
+    <section className="min-h-screen py-20 relative overflow-hidden" id="about">
       {/* Background Elements */}
-      <div className='absolute inset-0'>
-        <div className='absolute top-20 right-20 w-64 h-64 bg-blue-300/20 rounded-full blur-3xl'></div>
-        <div className='absolute bottom-20 left-20 w-64 h-64 bg-purple-300/20 rounded-full blur-3xl'></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-blue-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-purple-300/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className='container mx-auto px-6 relative z-10'>
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          className='text-center mb-16'
+          className="text-center mb-16"
           variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
-            className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4'
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
             variants={itemVariants}
           >
-            About <span className='gradient-text'>Me</span>
+            About <span className="gradient-text">Me</span>
           </motion.h1>
           <motion.div
-            className='w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto'
+            className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"
             variants={itemVariants}
           ></motion.div>
         </motion.div>
 
-        <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-12 items-center'>
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <motion.div
-            className='flex justify-center lg:justify-center'
+            className="flex justify-center lg:justify-center"
             variants={imageVariants}
-            initial='hidden'
-            whileInView='visible'
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className='relative'>
-              <div className='absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur-lg opacity-50'></div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur-lg opacity-50"></div>
               <img
-                className='relative w-60 h-80 object-cover rounded-xl shadow-2xl border-4 border-white/20'
+                className="relative w-60 h-80 object-cover rounded-xl shadow-2xl border-4 border-white/20"
                 src={ME}
-                alt='Aditya Tambe Profile'
+                alt="Aditya Tambe Profile"
               />
             </div>
           </motion.div>
 
           {/* Content Section */}
           <motion.div
-            className='space-y-6'
+            className="space-y-6"
             variants={containerVariants}
-            initial='hidden'
-            whileInView='visible'
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.h2
-              id='user-detail-name'
-              className='text-2xl md:text-3xl font-semibold text-white'
+              id="user-detail-name"
+              className="text-2xl md:text-3xl font-semibold text-white"
               variants={itemVariants}
             >
-              I'm <span className='gradient-text'>Aditya Tambe</span> from
+              I'm <span className="gradient-text">Aditya Tambe</span> from
               Mumbai, Maharashtra
             </motion.h2>
 
             <motion.p
-              id='user-detail-intro'
-              className={`text-lg leading-relaxed ${
+              id="user-detail-intro"
+              className={`text-lg leading-relaxed break-hyphen ${
                 isDarkMode
                   ? colors.dark.textSecondary
                   : colors.light.textSecondary
@@ -120,7 +120,7 @@ const About = () => {
             </motion.p>
 
             <motion.p
-              className={`text-lg leading-relaxed ${
+              className={`text-lg leading-relaxed break-hyphen ${
                 isDarkMode
                   ? colors.dark.textSecondary
                   : colors.light.textSecondary
@@ -158,11 +158,11 @@ const About = () => {
 
             {/* Stats */}
             <motion.div
-              className='grid grid-cols-3 gap-6 pt-6'
+              className="grid grid-cols-3 gap-6 pt-6"
               variants={itemVariants}
             >
-              <div className='text-center'>
-                <div className='text-3xl font-bold gradient-text'>1+</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">1+</div>
                 <div
                   className={`text-sm ${
                     isDarkMode
@@ -173,8 +173,8 @@ const About = () => {
                   Years Experience
                 </div>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold gradient-text'>10+</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">10+</div>
                 <div
                   className={`text-sm ${
                     isDarkMode
@@ -185,8 +185,8 @@ const About = () => {
                   Projects Completed
                 </div>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold gradient-text'>100%</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">100%</div>
                 <div
                   className={`text-sm ${
                     isDarkMode

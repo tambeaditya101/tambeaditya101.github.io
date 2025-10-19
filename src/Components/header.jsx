@@ -141,12 +141,16 @@ const Header = () => {
           {/* Logo */}
           <motion.a
             href="#home"
-            className={`text-2xl font-bold ${currentColors.text} hover:text-purple-400 transition-colors duration-300`}
+            className={`text-2xl font-bold bg-gradient-to-r ${
+              isDarkMode
+                ? "from-white via-purple-300 to-purple-700" // 🌙 Dark mode: bright gradient
+                : "from-black via-gray-500 to-purple-700" // ☀️ Light mode: your current look
+            } bg-clip-text text-transparent transition-all duration-500`}
             onClick={() => handleNavClick("#home")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Aditya <span className="text-purple-400">Tambe</span>
+            Portfolio
           </motion.a>
 
           {/* Desktop Navigation */}
