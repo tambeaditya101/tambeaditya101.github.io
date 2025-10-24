@@ -66,6 +66,16 @@ const Header = () => {
     return () => observer.disconnect();
   }, [navItems, isManualScroll]);
 
+  // Update URL hash when activeSection changes
+  useEffect(() => {
+    if (!isManualScroll && activeSection) {
+      const newHash = `#${activeSection}`;
+      if (window.location.hash !== newHash) {
+        window.history.replaceState(null, "", newHash);
+      }
+    }
+  }, [activeSection, isManualScroll]);
+
   // Handle nav click
   const handleNavClick = (href) => {
     setActiveSection(href.replace("#", ""));
