@@ -7,113 +7,79 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { isDarkMode, toggleTheme, colors } = useTheme();
+  const [isManualScroll, setIsManualScroll] = useState(false);
+  const [scrollTimeout, setScrollTimeout] = useState(null);
 
+  const { isDarkMode, toggleTheme, colors } = useTheme();
   const currentColors = isDarkMode ? colors.dark : colors.light;
 
   const navItems = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
+    { href: "#tools", label: "Tools" },
     { href: "#projects", label: "Projects" },
     { href: "#github", label: "GitHub" },
     { href: "#contact", label: "Contact" },
   ];
 
+  // Detect scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Intersection Observer for active section detection
+  // Intersection Observer for section tracking
   useEffect(() => {
     const setupObserver = (sectionsToObserve) => {
       const observer = new IntersectionObserver(
         (entries) => {
-          // Sort entries by intersection ratio and position
           const visibleEntries = entries.filter(
             (entry) => entry.isIntersecting
           );
-
-          if (visibleEntries.length > 0) {
-            // Find the entry with the highest intersection ratio
-            const mostVisible = visibleEntries.reduce((prev, current) => {
-              return current.intersectionRatio > prev.intersectionRatio
+          if (visibleEntries.length > 0 && !isManualScroll) {
+            const mostVisible = visibleEntries.reduce((prev, current) =>
+              current.intersectionRatio > prev.intersectionRatio
                 ? current
-                : prev;
-            });
-
-            console.log(
-              "Setting active section:",
-              mostVisible.target.id,
-              "ratio:",
-              mostVisible.intersectionRatio
+                : prev
             );
             setActiveSection(mostVisible.target.id);
           }
         },
         {
-          threshold: [0, 0.1, 0.25, 0.5, 0.75, 1.0], // Multiple thresholds for better detection
-          rootMargin: "-80px 0px -50% 0px", // Account for navbar height
+          threshold: [0, 0.1, 0.25, 0.5, 0.75, 1.0],
+          rootMargin: "-80px 0px -50% 0px",
         }
       );
 
-      sectionsToObserve.forEach((section) => {
-        observer.observe(section);
-      });
-
+      sectionsToObserve.forEach((section) => observer.observe(section));
       return observer;
     };
 
-    const sections = navItems.map((item) =>
-      document.getElementById(item.href.replace("#", ""))
-    );
+    const sections = navItems
+      .map((item) => document.getElementById(item.href.replace("#", "")))
+      .filter((section) => section !== null);
 
-    // Filter out null sections and log for debugging
-    const validSections = sections.filter((section) => section !== null);
-    console.log(
-      "Valid sections found:",
-      validSections.map((s) => s.id)
-    );
+    if (sections.length === 0) return;
+    const observer = setupObserver(sections);
+    return () => observer.disconnect();
+  }, [navItems, isManualScroll]);
 
-    if (validSections.length === 0) {
-      console.log("No valid sections found, retrying in 500ms...");
-      const timeoutId = setTimeout(() => {
-        // Retry after a short delay to ensure DOM is ready
-        const retrySections = navItems
-          .map((item) => document.getElementById(item.href.replace("#", "")))
-          .filter((section) => section !== null);
-
-        if (retrySections.length > 0) {
-          console.log(
-            "Retry successful, found sections:",
-            retrySections.map((s) => s.id)
-          );
-          setupObserver(retrySections);
-        }
-      }, 500);
-
-      return () => clearTimeout(timeoutId);
-    }
-
-    const observer = setupObserver(validSections);
-
-    return () => {
-      if (observer) {
-        validSections.forEach((section) => {
-          observer.unobserve(section);
-        });
-      }
-    };
-  }, [navItems]);
-
+  // Handle nav click
   const handleNavClick = (href) => {
     setActiveSection(href.replace("#", ""));
     setIsMobileMenuOpen(false);
+    setIsManualScroll(true);
+
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (scrollTimeout) clearTimeout(scrollTimeout);
+    const timeout = setTimeout(() => setIsManualScroll(false), 1200);
+    setScrollTimeout(timeout);
   };
 
   return (
@@ -143,8 +109,8 @@ const Header = () => {
             href="#home"
             className={`text-2xl font-bold bg-gradient-to-r ${
               isDarkMode
-                ? "from-white via-purple-300 to-purple-700" // 🌙 Dark mode: bright gradient
-                : "from-black via-gray-500 to-purple-700" // ☀️ Light mode: your current look
+                ? "from-white via-purple-300 to-purple-700"
+                : "from-black via-gray-500 to-purple-700"
             } bg-clip-text text-transparent transition-all duration-500`}
             onClick={() => handleNavClick("#home")}
             whileHover={{ scale: 1.05 }}
@@ -232,7 +198,6 @@ const Header = () => {
               }
             >
               {isDarkMode ? (
-                // Sun icon for light mode
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
@@ -245,7 +210,6 @@ const Header = () => {
                   />
                 </svg>
               ) : (
-                // Moon icon for dark mode
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
@@ -344,11 +308,11 @@ const Header = () => {
                 Resume
               </a>
 
-              {/* Mobile Theme Toggle Button */}
+              {/* Mobile Theme Toggle */}
               <motion.button
                 onClick={() => {
                   toggleTheme();
-                  setIsMobileMenuOpen(false); // close the menu after theme change
+                  setIsMobileMenuOpen(false);
                 }}
                 className={`p-3 rounded-full ${currentColors.surface} ${currentColors.text} hover:text-purple-400 transition-all duration-300 hover:scale-110 mt-4 mx-auto flex items-center justify-center gap-2`}
                 whileHover={{ scale: 1.1 }}
@@ -358,7 +322,6 @@ const Header = () => {
                 }
               >
                 {isDarkMode ? (
-                  // Sun icon for light mode
                   <>
                     <svg
                       className="w-5 h-5"
@@ -374,7 +337,6 @@ const Header = () => {
                     <span className="text-sm">Light Mode</span>
                   </>
                 ) : (
-                  // Moon icon for dark mode
                   <>
                     <svg
                       className="w-5 h-5"
