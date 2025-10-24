@@ -111,15 +111,15 @@ const Skills = () => {
             return (
               <motion.div
                 key={skill.name}
-                className="card group hover:scale-105 transition-all duration-300 cursor-pointer"
+                className="card group transition-all duration-300"
                 variants={itemVariants}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -5, scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <div className="text-center">
                   {/* Icon */}
                   <div className="mb-4 flex justify-center">
-                    <div className="p-4 rounded-full transition-all duration-300 bg-white  group-hover:shadow-2xl">
+                    <div className="p-4 rounded-full transition-all duration-300 bg-white group-hover:shadow-2xl">
                       <IconComponent
                         size={50}
                         style={{ color: skill.color }}
@@ -134,7 +134,7 @@ const Skills = () => {
                   </h3>
 
                   {/* Progress Bar */}
-                  <div className="w-full rounded-full h-2 mb-2 border border-white-400  bg-transparent overflow-hidden">
+                  <div className="w-full rounded-full h-2 mb-2 border border-white-400 bg-transparent overflow-hidden">
                     <motion.div
                       className="h-full bg-gradient-to-r from-yellow-200 via-green-300 to-blue-400"
                       initial={{ width: 0 }}

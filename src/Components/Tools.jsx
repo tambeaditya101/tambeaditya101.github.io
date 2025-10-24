@@ -133,15 +133,14 @@ const Tools = () => {
             return (
               <motion.div
                 key={index}
-                className={`group relative p-6 rounded-3xl border border-white/10 transition-all duration-300 hover:scale-105 hover:border-white/20`}
+                className={`group relative p-6 rounded-3xl border border-white/10 transition-all duration-300`}
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5, scale: 1.1 }}
                 style={{ backgroundColor: tool.bgColor }}
               >
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div
-                    className={`p-4 rounded-xl group-hover:scale-110 transition-transform duration-300`}
-                    // style={{ backgroundColor: tool.bgColor }}
+                    className={`p-4 rounded-xl transition-transform duration-300`}
                   >
                     <IconComponent className={`w-8 h-8 ${tool.color}`} />
                   </div>
@@ -149,9 +148,6 @@ const Tools = () => {
                     {tool.name}
                   </h3>
                 </div>
-
-                {/* Hover effect overlay */}
-                {/* <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
               </motion.div>
             );
           })}
