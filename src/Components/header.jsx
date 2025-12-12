@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import CV from "../assests/Aditya_Tambe_Resume.pdf";
 import { useTheme } from "../contexts/ThemeContext";
+import { resumeDriveLink } from "../constants";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -175,11 +176,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/1p9hDNZF1Fa_I9Ng4HFWyjs6dUjxTucd7/view?usp=drive_link"
-                  )
-                }
+                onClick={() => window.open(resumeDriveLink)}
               >
                 <svg
                   className="w-4 h-4"
@@ -298,9 +295,7 @@ const Header = () => {
                 className="btn-primary inline-flex items-center justify-center gap-2 mt-4"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  window.open(
-                    "https://drive.google.com/file/d/1p9hDNZF1Fa_I9Ng4HFWyjs6dUjxTucd7/view?usp=drive_link"
-                  );
+                  window.open(resumeDriveLink);
                 }}
               >
                 <svg

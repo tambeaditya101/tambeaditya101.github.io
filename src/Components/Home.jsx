@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import CV from "../assests/Aditya_Tambe_Resume.pdf";
 import { useTheme } from "../contexts/ThemeContext";
+import { resumeDriveLink } from "../constants";
 
 const Home = () => {
   const { isDarkMode, colors } = useTheme();
@@ -119,11 +120,7 @@ const Home = () => {
             <button
               id="resume-button-2"
               className="btn-primary group"
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1sZx14qmCT2UK0N968m1lWRIZxOoByZWH/view?usp=sharing"
-                )
-              }
+              onClick={() => window.open(resumeDriveLink)}
             >
               <a
                 href={CV}

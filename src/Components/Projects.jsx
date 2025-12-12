@@ -4,7 +4,7 @@ import { FiExternalLink } from "react-icons/fi";
 import brookSpic from "../assests/brookSpic.png";
 import caretLane from "../assests/caret.png";
 import hc from "../assests/health-care.png";
-import internTheorypic from "../assests/internTheorypic.png";
+import hms from "../assests/hms.png";
 import tripAdpic from "../assests/tripAdpic.png";
 import urlShortner from "../assests/url-shortner.png";
 import nextLearnEcom from "../assests/nextLearn-ecom.png";
@@ -38,6 +38,27 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Hospital Management System",
+      description:
+        "Built a multi-tenant Hospital Management System with secure JWT auth, advanced RBAC, and complete patient, user, and appointment modules. Implemented conflict-free appointment scheduling, tenant-based data isolation, and a modern interactive dashboard using React, Redux, Prisma, and PostgreSQL.",
+      techStack: [
+        "React 19",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Prisma ORM",
+        "JWT",
+        "RBAC",
+      ],
+      image: hms,
+      liveLink: "https://hms-project-nu.vercel.app/",
+      githubLink: "https://github.com/tambeaditya101/hms-project",
+      featured: true,
+    },
+    {
+      id: 2,
       title: "URL Shortener",
       description:
         "A modern, full-stack URL shortener application built with React and Node.js. Create short, shareable links with optional custom slugs, user authentication, and a beautiful, responsive interface.",
@@ -56,7 +77,7 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 2,
+      id: 3,
       title: "NextLearn Store – Full-Stack E-Commerce Web App ",
       description:
         "A modern, full-stack e-commerce application built with Next.js and PostgreSQL, featuring secure JWT authentication, dynamic product management, and a responsive, elegant UI powered by Tailwind CSS and Context API.",
@@ -76,7 +97,7 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 3,
+      id: 4,
       title: "Tata 1mg Clone",
       description:
         "E-commerce website for medicines with functionalities including login/signup, sort-filter-pagination, and CRUD operations for Admin panel.",
@@ -87,7 +108,7 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 4,
+      id: 5,
       title: "CaratLane Clone",
       description:
         "A comprehensive jewelry e-commerce platform featuring gold, silver, and diamond jewelry with modern shopping experience.",
@@ -106,7 +127,7 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 5,
+      id: 6,
       title: "Brookstone Clone",
       description:
         "E-Commerce retail platform with features like search functionality, cart management, product filtering, and admin panel.",
@@ -117,7 +138,7 @@ const Projects = () => {
       featured: false,
     },
     {
-      id: 6,
+      id: 7,
       title: "Let's Trip",
       description:
         "A beautiful travel destination website that helps users discover and choose vacation spots with stunning visuals.",
@@ -127,17 +148,6 @@ const Projects = () => {
       githubLink: "https://github.com/tambeaditya101/thundering-self-8895",
       featured: false,
     },
-    // {
-    //   id: 7,
-    //   title: "Intern Theory Clone",
-    //   description:
-    //     "A platform designed to help students find appropriate internships quickly and become job-ready with comprehensive resources.",
-    //   techStack: ["HTML", "CSS", "JavaScript"],
-    //   image: internTheorypic,
-    //   liveLink: "https://illustrious-gelato-7e4fe9.netlify.app/index.html",
-    //   githubLink: "https://github.com/Sagarbisht07/nosy-coach-5858",
-    //   featured: false,
-    // },
   ];
 
   return (
