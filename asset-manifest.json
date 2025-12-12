@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.028b5032.css",
-    "main.js": "/static/js/main.1e5f1acc.js",
+    "main.js": "/static/js/main.81b55e92.js",
     "static/js/787.5b08774b.chunk.js": "/static/js/787.5b08774b.chunk.js",
     "static/media/tripAdpic.png": "/static/media/tripAdpic.1d6aa462b4ae055e63bc.png",
     "static/media/brookSpic.png": "/static/media/brookSpic.51006bb2b1f84ce39597.png",
-    "static/media/internTheorypic.png": "/static/media/internTheorypic.7247bbe5d58fb5c5a8e3.png",
     "static/media/caret.png": "/static/media/caret.aae150f67c78c7104ede.png",
     "static/media/health-care.png": "/static/media/health-care.3c91c47246fbb03a9277.png",
+    "static/media/hms.png": "/static/media/hms.cf48b6927a12d7f4d275.png",
     "static/media/nextLearn-ecom.png": "/static/media/nextLearn-ecom.8c645aca0bd08e00afb5.png",
     "static/media/me.png.jpeg": "/static/media/me.png.932ad657f3ebeebc1f67.jpeg",
     "static/media/url-shortner.png": "/static/media/url-shortner.4d38ffb8c5bf014dae03.png",
-    "static/media/Aditya_Tambe_Resume.pdf": "/static/media/Aditya_Tambe_Resume.b32117fb4c7c27b15ac1.pdf",
+    "static/media/Aditya_Tambe_Resume.pdf": "/static/media/Aditya_Tambe_Resume.6914e526ad6daed51304.pdf",
     "index.html": "/index.html",
     "main.028b5032.css.map": "/static/css/main.028b5032.css.map",
-    "main.1e5f1acc.js.map": "/static/js/main.1e5f1acc.js.map",
+    "main.81b55e92.js.map": "/static/js/main.81b55e92.js.map",
     "787.5b08774b.chunk.js.map": "/static/js/787.5b08774b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.028b5032.css",
-    "static/js/main.1e5f1acc.js"
+    "static/js/main.81b55e92.js"
   ]
 }
